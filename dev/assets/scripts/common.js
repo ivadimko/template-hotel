@@ -55,14 +55,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		function(){
 			$(this).parent().removeClass('active');
 		});
-$(".tab__text").mCustomScrollbar({
-	axis:"y",
-	autoHideScrollbar: true,
-	scrollInertia: 500,
-}); 
-/*$(".body-wrapper").mCustomScrollbar({
-	axis:"y",
-	autoHideScrollbar: true,
-}); */
+	if ($(window).width() > 767) {
+	$(".tab__text").mCustomScrollbar({
+		axis:"y",
+		autoHideScrollbar: true,
+		scrollInertia: 500,
+	});
+		
+	}
+
 
 });

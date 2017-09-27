@@ -30,6 +30,7 @@
 	margin-right: -17%;
 	&__item{
 		transition: transform .2s ease;
+		will-change: transform;
 		&.active{
 			transform: scale(0.95,0.95);
 		}
