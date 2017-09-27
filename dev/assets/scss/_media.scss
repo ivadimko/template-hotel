@@ -16,19 +16,70 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-	/**/
+	.header__desc {
+    padding: 140px 25px 100px 65px;
+}
+.section__top{
+	    padding: 40px 30px 30px 35px;
+	        margin: 0 0 40px
+}
+.section__wrapper{
+	margin: 0;
+}
+.item__img{
+	height: 350px;
+}
 }
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-	/**/
+	.header__menu{
+		transform: translate(0,0);
+	}
+	.header__content{
+		flex-direction: column;
+	}
+	.header__images{
+		height: 500px;
+	}
+	.header__desc{
+		margin: 0;
+		padding: 25px;
+	}
+	.header__heading{
+		text-align: center;
+	}
 }
 
-
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 620px) {
+	.menu__item{
+		padding: 15px 5px;
+	}
+	.header__menu{
+		background-color: transparent;
+		@include linear-gradient(0deg, transparent 0%, #fff 100%);
+		width: 100%;
+		text-align: center;
+		border-radius: 0
+	}
+	.header__nav{
+		top: 0;
+		left: 0;
+	}
+	.menu__link{
+		color: #fff;
+	}
+}
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-	/**/
+	.menu__link{
+		letter-spacing: 0;
+	}
+	.section__heading{
+		font-size: 2.4rem;
+	}
 }
 
 

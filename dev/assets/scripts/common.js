@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function (event) {
-mobileNav();
+	
 	let tabHeading = $('.tab__heading'),
 			tabText = $('.tab__text'),
 			tabImage = $('.tab__image');
@@ -25,8 +25,28 @@ mobileNav();
   	slidesToShow: 3,
   	slidesToScroll: 2,
   	autoplay: true,
-  autoplaySpeed: 2000,
-  arrows: false,
+	  autoplaySpeed: 2000,
+	  arrows: false,
+	  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        infinite: true
+      }
+    },
+    {
+      breakpoint: 620,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
   });
 	$('.item__img').hover(
 		function(){
@@ -35,27 +55,17 @@ mobileNav();
 		function(){
 			$(this).parent().removeClass('active');
 		});
-
+$(".tab__text").mCustomScrollbar({
+	axis:"y",
+	autoHideScrollbar: true,
+}); 
+$(".body-wrapper").mCustomScrollbar({
+	axis:"y",
+	autoHideScrollbar: true,
+}); 
 
 });
-
-//Mobile menu function
-function mobileNav() {
-	var menu 			= document.querySelector('.header__menu'),
-		mobilemenu 		= document.querySelector('.mobile-nav__menu'),
-		JSinit 			= document.querySelector('.js_mobile-nav'),
-		burger 			= document.querySelectorAll('.burger'),
-		activeClass 	= 'open';
-	function toggle() {
-		JSinit.classList.toggle(activeClass);
-	}
-	if (mobilemenu.innerHTML == 0)
-		mobilemenu.innerHTML = menu.innerHTML;
-
-	/* for (var i = 0; i < burger.length; i++) {
-			burger[i].addEventListener('click', toggle);
-		} */
-	for (var i = 0; i < burger.length; i++) {
-		burger[i].onclick = toggle;
-		};
-}
+$(window).scroll(function(){
+		console.log('jo');
+		
+	});

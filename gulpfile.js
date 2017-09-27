@@ -22,7 +22,7 @@ gulp.task('html', function () {
 gulp.task('js', function() {
 	return gulp.src([
 //-----------------------Include libraries-------------------------
-		'./dev/assets/scripts/libs/slick-carousel/slick/slick.min.js',
+		'./dev/assets/scripts/libs/custom-scrollbar/jquery.mCustomScrollbar.js',
 //-----------------------------------------------------------------
 		])
 	.pipe(concat('scripts.min.js'))
@@ -73,7 +73,7 @@ gulp.task('sass-main', function () {
 
 gulp.task('sass', ['sass-base', 'sass-main']);  
 
-gulp.task('watch', ['html', 'sass', 'browser-sync'], function() {
+gulp.task('watch', ['html', 'sass', 'js', 'browser-sync'], function() {
 	gulp.watch('./dev/assets/scss/**/*.scss', ['sass']);
 	gulp.watch('./dev/assets/scripts/**/*.js', browserSync.reload);
 	gulp.watch("./dev/src/**/*.html", ['html']);

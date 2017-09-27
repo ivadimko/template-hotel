@@ -16,7 +16,8 @@ body {
 	margin: auto;
 	position: relative;
 	line-height: 1.5;
-	overflow-X: hidden; 
+	overflow: auto; 
+	height: 100vh;
 }
 strong, b, .strong {
 	font-weight: 600;
