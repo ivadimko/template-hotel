@@ -58,14 +58,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
 $(".tab__text").mCustomScrollbar({
 	axis:"y",
 	autoHideScrollbar: true,
+	scrollInertia: 500,
 }); 
-$(".body-wrapper").mCustomScrollbar({
+/*$(".body-wrapper").mCustomScrollbar({
 	axis:"y",
 	autoHideScrollbar: true,
-}); 
+}); */
 
 });
-$(window).scroll(function(){
-		console.log('jo');
-		
-	});
