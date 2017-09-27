@@ -64,20 +64,22 @@
 	line-height: 1.5;
 	letter-spacing: 2px;
 	text-transform: uppercase;
+	.icon{
+		font-size: 1.4rem;
+	}
 	&:hover{
 		text-decoration: underline;
 		.icon{
-			transform: translate(2px, 0);
+			transform: translate(5px, 0);
 			&+.icon{
-				transform: translate(18px, 0);
+				transform: translate(22px, 0);
 			}
 		}
 	}
 }
 .icon{
-	font-size: .8rem;
 	position: absolute;
-	top: 2px;
+	top: 0;
 	transition: transform $time ease;
 	will-change: transform;
 	&+.icon{
