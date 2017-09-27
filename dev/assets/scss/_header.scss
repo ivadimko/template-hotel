@@ -1,3 +1,152 @@
 .header {
+	&__nav{
+		position: absolute;
+		top: 100px;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		z-index: 1000;
+	}
+	&__menu{
+		background-color: #fff;
+		padding: 5px 10px;
+		border-radius: 4px;
+		font-size: 0;
+		transform: translate(22px, 0);
+	}
+	&__content{
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		background-color: transparent;
+	}
+	&__images{
+		flex: 0 0 50%;
+		height: 860px;
+		overflow: hidden;
+		position: relative;
+	}
+	&__image{
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: top center;
+	}
+	&__desc{
+		flex: 0 0 50%;
+		background-color: #F8F9FA;
+		margin: 50px 0;
+		padding: 180px 165px 135px 125px;
+	}
+	&__heading{
+		@extend %display;
+		font-size: 3.4rem;
+		color: #06102F;
+	}
+	&__text{
+		@extend %light;
+		font-size: 1.6rem;
+		padding-top: 45px;
+	}
+	&__link{
+		margin-top: 50px;
+	}
+}
+.link{
+	@extend %bold;
+	font-size: 1rem;
+	color: #48474E;
+	position: relative;
+	padding-right: 20px;
+	display: inline-block;
+	line-height: 1.5;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	&:hover{
+		text-decoration: underline;
+		.icon{
+			transform: translate(2px, 0);
+			&+.icon{
+				transform: translate(18px, 0);
+			}
+		}
+	}
+}
+.icon{
+	font-size: .8rem;
+	position: absolute;
+	top: 2px;
+	transition: transform $time ease;
+	will-change: transform;
+	&+.icon{
+		left: -20px;
+	}
+}
+.arrows{
+	position: absolute;
+	top: 0;
+	right: 0px;
+	height: 12px;
+	width: 12px;
+	overflow: hidden;
+}
+.menu{
+	&__item{
+		display: inline-block;
+		padding: 20px 20px;
+		margin-right: 3px;
+		cursor: pointer;
+		border-radius: 4px;
+		transition: background-color $time ease;
+		&:hover{
+			background-color: #F3F3F5;
+			.menu__link{
+				color: #06102F;
+			}
+		}
+		&.active{
+			background-color: #F3F3F5;
+			.menu__link{
+				color: #06102F;
+			}
+		}
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+	&__link{
+		@extend %regular;
+		font-size: 1rem;
+		text-transform: uppercase;
+		color: #869099;
+		transition: color $time ease;
+		letter-spacing: 2px;
 
+	}
+}
+.tab{
+	&__text{
+		display: none;
+				overflow: auto;
+		max-height: 400px;
+		&.active{
+			display: block;
+		}
+	}
+	&__image{
+		transform: translate(-100%,0);
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		transition: transform $time ease;
+		z-index: 1;
+		&.active{
+			transform: translate(0,0);
+			z-index: 900;
+		}
+		&.inactive{
+			transform: translate(100%,0);
+		}
+	}
 }

@@ -12,11 +12,12 @@ body {
     font-weight: 400;
 	color: $primary_color;
 }
-
-p {
-	margin-bottom: 2rem;
+.body-wrapper{
+	margin: auto;
+	position: relative;
+	line-height: 1.5;
+	overflow-X: hidden; 
 }
-
 strong, b, .strong {
 	font-weight: 600;
 }

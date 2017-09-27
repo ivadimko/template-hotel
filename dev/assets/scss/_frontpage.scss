@@ -1,8 +1,67 @@
 .section{
-    &__header{
-        text-align: center;
-        font-family: 'roboto-example', $helvetica;
-        font-size: 2rem;
-        font-weight: bold;
-    }
+	&__wrapper{
+		margin-left: 165px;
+	}
+	&__top{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 165px 40px 0;
+		position: relative;
+		padding: 110px 30px 30px 35px;
+		&::after{
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 1px;
+			background-color: #E4E6E8;
+			left: 0;
+			bottom: 0;
+		}
+	}
+	&__heading{
+		@extend %display;
+		font-size: 3.4rem;
+	}
+}
+.gallery{
+	display: flex;
+	justify-content: space-between;
+	margin-right: -17%;
+	&__item{
+		transition: transform .2s ease;
+		&.active{
+			transform: scale(0.9,0.9);
+		}
+	}
+	
+}
+.item{
+	&__img{
+		display: block;
+		transition: transform .2s ease;
+		height: 445px;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+	&__desc{
+		padding: 40px;
+	}
+	&__heading{
+		@extend %medium;
+		font-size: 1.8rem;
+		color: #2B2A36;
+	}
+	&__text{
+		@extend %light;
+		color: #869099;
+		line-height: 1.8;
+		padding-top: 5px;
+
+	}
+}
+.slick-slide{
+	margin-right: 20px;
 }

@@ -1,6 +1,14 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
+@media only screen and (max-width : 1366px) {
+	.header__desc{
+		padding: 160px 105px 100px 85px;
+	}
+	.header__images{
+		height: 760px;
+	}
+}
 @media only screen and (max-width : 1200px) {
 	/**/
 }
