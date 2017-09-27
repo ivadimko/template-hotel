@@ -68,7 +68,7 @@ gulp.task('sass-main', function () {
 	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('./dev/assets/css'))
 	.pipe(browserSync.reload({stream: true}));
-	},200);
+	},500);
 });
 
 gulp.task('sass', ['sass-base', 'sass-main']);  
