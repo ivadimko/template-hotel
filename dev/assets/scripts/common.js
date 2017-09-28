@@ -11,12 +11,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		if ($(this).hasClass('active')) {} else {
 			$(tabHeading).removeClass('active');
 			$(this).addClass('active');
-			$(tabImage).removeClass('inactive');
-			$('.header__images').find('.active').removeClass('active').addClass('inactive').fadeOut();
+			//$(tabImage).removeClass('inactive');
+			//$('.header__images').find('.active').removeClass('active').addClass('inactive').fadeOut();
 			$(tabImage).removeClass('active');
-			$(tabImage).eq($(this).index()).addClass('active').fadeIn();
+			$(tabImage).eq($(this).index()).addClass('active');
 			$(tabText).removeClass('active');
-			$(tabText).fadeOut().eq($(this).index()).fadeIn();
+			//$(tabText).fadeOut().eq($(this).index()).fadeIn();
 			$(tabText).eq($(this).index()).addClass('active');
 		}
 	});
@@ -43,18 +43,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         slidesToScroll: 1
       }
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
   ]
   });
-	$('.item__img').hover(
-		function(){
-			$(this).parent().addClass('active');
-	},
-		function(){
-			$(this).parent().removeClass('active');
-		});
 	if ($(window).width() > 767) {
 	$(".tab__text").mCustomScrollbar({
 		axis:"y",

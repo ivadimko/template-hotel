@@ -5,6 +5,9 @@
 	.header__desc{
 		padding: 160px 105px 100px 85px;
 	}
+	.tab__text{
+		padding-right: 105px;
+	}
 	.header__images{
 		height: 760px;
 	}
@@ -18,6 +21,9 @@
 @media only screen and (max-width : 992px) {
 	.header__desc {
     padding: 140px 25px 100px 65px;
+}
+.tab__text{
+	padding-right: 25px;
 }
 .section__top{
 	    padding: 40px 30px 30px 35px;
@@ -49,6 +55,11 @@
 	}
 	.tab__text{
 		max-height: 1000px;
+		position: relative;
+		display: none;
+		&.active{
+			display: block;
+		}
 	}
 	.header__heading{
 		text-align: center;
