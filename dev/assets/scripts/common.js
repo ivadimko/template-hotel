@@ -11,13 +11,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		if ($(this).hasClass('active')) {} else {
 			$(tabHeading).removeClass('active');
 			$(this).addClass('active');
-			//$(tabImage).removeClass('inactive');
-			//$('.header__images').find('.active').removeClass('active').addClass('inactive').fadeOut();
 			$(tabImage).removeClass('active');
 			$(tabImage).eq($(this).index()).addClass('active');
 			$(tabText).removeClass('active');
-			//$(tabText).fadeOut().eq($(this).index()).fadeIn();
-			$(tabText).eq($(this).index()).addClass('active');
+			$(tabText).eq($(this).index()).addClass('active')
+			
 		}
 	});
 	$('.gallery').slick({
